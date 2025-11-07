@@ -37,7 +37,7 @@ const ExpressionInput: React.FC<ExpressionInputProps> = ({
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors">
+    <div className="bg-white dark:bg-gray-800 rounded-md p-2.5 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors">
       <div className="flex items-start gap-2">
         <div
           className="w-4 h-4 rounded-full mt-1.5 flex-shrink-0 border border-gray-300 dark:border-gray-600"

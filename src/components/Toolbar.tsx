@@ -16,7 +16,7 @@ const Toolbar: React.FC<ToolbarProps> = ({
   sidebarOpen 
 }) => {
   return (
-    <div className="w-full h-12 lg:h-14 bg-white dark:bg-gray-900 text-gray-900 dark:text-white flex items-center justify-between px-4 lg:px-6 border-b border-gray-200 dark:border-gray-800 shadow-sm">
+    <div className="w-full h-12 bg-white dark:bg-gray-900 text-gray-900 dark:text-white flex items-center justify-between px-3 lg:px-4 border-b border-gray-200 dark:border-gray-800 shadow-sm flex-shrink-0">
       <div className="flex items-center gap-3 lg:gap-4">
         {/* Mobile Menu Button */}
         {onToggleSidebar && (

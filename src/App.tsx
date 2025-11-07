@@ -403,7 +403,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`w-full h-full flex flex-col ${themeClass} overflow-hidden`} style={{ minHeight: '100vh' }}>
+    <div className={`w-screen h-screen flex flex-col ${themeClass} overflow-hidden`}>
       <Toolbar
         onReset={handleReset}
         onOpenSettings={() => setSettingsOpen(true)}
@@ -411,7 +411,7 @@ function App() {
         onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
         sidebarOpen={sidebarOpen}
       />
-      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
+      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden relative min-h-0 min-w-0">
         {/* Mobile Sidebar Overlay */}
         {sidebarOpen && (
           <div
@@ -423,10 +423,12 @@ function App() {
         {/* Expression List - Responsive */}
         <div
           className={`
-            ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+            ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+            lg:translate-x-0
             fixed lg:static
             top-0 left-0 h-full
-            w-80 max-w-[85vw]
+            w-64 sm:w-72 lg:w-64
+            max-w-[90vw] lg:max-w-none
             bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800
             flex flex-col
             shadow-2xl lg:shadow-none

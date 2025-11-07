@@ -24,17 +24,17 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
   onClose,
 }) => {
   return (
-    <div className="w-full h-full flex flex-col bg-white dark:bg-gray-900">
+    <div className="w-full h-full flex flex-col bg-white dark:bg-gray-900 min-w-0">
       {/* Header */}
-      <div className="p-4 lg:p-5 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
-        <div className="flex items-center justify-between mb-3">
-          <h2 className="text-base lg:text-lg font-semibold text-gray-900 dark:text-white">
+      <div className="p-3 lg:p-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 flex-shrink-0">
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-sm lg:text-base font-semibold text-gray-900 dark:text-white">
             Fonksiyonlar
           </h2>
           {onClose && (
             <button
               onClick={onClose}
-              className="lg:hidden p-1.5 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-400"
+              className="lg:hidden p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-400"
               aria-label="Close"
             >
               <svg
@@ -51,7 +51,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
         </div>
         <button
           onClick={onAddExpression}
-          className="w-full px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2"
+          className="w-full px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-xs lg:text-sm font-medium transition-colors flex items-center justify-center gap-1.5"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ const ExpressionList: React.FC<ExpressionListProps> = ({
       </div>
       
       {/* Expression List */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-3">
+      <div className="flex-1 overflow-y-auto p-3 space-y-2.5 scrollbar-thin">
         {expressions.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 px-4 text-center">
             <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-3">

@@ -621,7 +621,7 @@ const GraphCanvas = forwardRef<GraphCanvasHandle, GraphCanvasProps>(({
   const bgClass = settings.theme === 'light' ? 'bg-white' : 'bg-gray-900';
   
   return (
-    <div className={`flex-1 relative ${bgClass} overflow-hidden`}>
+    <div className={`flex-1 relative ${bgClass} overflow-hidden min-w-0`}>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing touch-none"
